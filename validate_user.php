@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'try';
+$database = 'rctc_admin';
 
 // Create a connection to the MySQL database
 $connection = new mysqli($hostname, $username, $password, $database);
@@ -38,4 +38,3 @@ if ($result->num_rows === 1) {
 // Close the statement and the database connection
 $statement->close();
 $connection->close();
-?>

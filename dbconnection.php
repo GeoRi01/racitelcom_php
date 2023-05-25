@@ -2,6 +2,6 @@
 
 function dbconnection()
 {
-    $conn = mysqli_connect("localhost", "root", "", "try");
+    $conn = mysqli_connect("localhost", "root", "", "rctc_admin");
     return $conn;
 }
