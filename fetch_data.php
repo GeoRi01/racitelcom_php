@@ -18,7 +18,7 @@ if ($connection->connect_error) {
 $searchString = $_GET['searchString'];
 
 // Construct the SQL query
-$query = "SELECT * FROM users WHERE username LIKE '%$searchString%'";
+$query = "SELECT * FROM subscribers WHERE subs_email LIKE '%$searchString%'";
 
 // Execute the query
 $result = mysqli_query($connection, $query);

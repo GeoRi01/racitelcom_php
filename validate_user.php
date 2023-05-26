@@ -14,13 +14,13 @@ if ($connection->connect_error) {
 }
 
 // Retrieve the username and password from the POST request
-$username = $_POST['username'];
+$email = $_POST['email'];
 $password = $_POST['password'];
 
 // Prepare and execute the query
-$query = "SELECT * FROM users WHERE username = ? AND password = ?";
+$query = "SELECT * FROM subscribers WHERE subs_email = ? AND subs_password = ?";
 $statement = $connection->prepare($query);
-$statement->bind_param('ss', $username, $password);
+$statement->bind_param('ss', $email, $password);
 $statement->execute();
 
 // Fetch the result
